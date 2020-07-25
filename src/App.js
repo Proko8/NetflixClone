@@ -1,20 +1,19 @@
 import React from 'react';
 import Row from "./Row"
-
+import requests from "./requests";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Row title="NETFLIX ORIGINALS"/>
-      <Row title="TRENDING NOW"/>
-      <Row title="TOP RATED"/>
-      <Row title="ACTION MOVIES"/>
-      <Row title="COMEDY MOVIES"/>
-      <Row title="HORROR MOVIES"/>
-      <Row title="ROMANCE MOVIES"/>
-      <Row title="DOCUMENTARIES"/>
+      <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals}/>
+      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending}/>
+      <Row title="TOP RATED" fetchUrl={requests.fetchTopRated}/>
+      <Row title="ACTION MOVIES" fetchUrl={requests.fetchActionMovie}/>
+      <Row title="COMEDY MOVIES" fetchUrl={requests.fetchComedyMovie}/>
+      <Row title="HORROR MOVIES" fetchUrl={requests.fetchHorrorMovie}/>
+      <Row title="ROMANCE MOVIES" fetchUrl={requests.fetchRomanceMovie}/>
+      <Row title="DOCUMENTARIES" fetchUrl={requests.fetchDocumentaries}/>
 
 
     </div>
